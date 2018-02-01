@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <form class="form-signin" role="form" th:action="@{/logincontroll/login}" th:method="post">
+        <input id="username" type="text" class="form-control" placeholder="用户名" required="required" name="username"/>
+        <input id="password" type="password" class="form-control" placeholder="密码" required="required" name="password"/>
+        <span class="help-box" style="color:red" th:if="${param}"/>
+        <button class="btn btn-lg btn-warning btn-block" type="submit">登录</button>
+        <label class="checkbox">
+            <input type="checkbox" value="remember-me"/> 记住我
+        </label>
+    </form>
+</body>
+</html>
